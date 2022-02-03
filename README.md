@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+##game spec
 
-## Getting Started
+* Math.pow(Math.round((stage + 0.5) / 2) + 1, 2)개의 사각형이 표시되며, 그 중 하나만 색깔이 다릅니다.
+* 한 stage의 제한 시간은 15초입니다.
+* 색이 다른 사각형(정답)을 클릭한 경우 아래 변경사항이 적용됩니다.
+  * 다음 스테이지로 넘어갑니다.
+  * Math.pow(stage, 3) * 남은시간 만큼의 score가 누적됩니다
+* 오답을 클릭한 경우 아래 변경사항이 적용됩니다.
+  * 현재 stage의 남은 시간이 3초 줄어듭니다.
+* 남은 시간이 0초 이하가 되면 게임이 종료됩니다. 최종 stage와 누적 score를 출력하고, 새로운 게임을 시작할 수 있습니다.
+* stage가 올라갈수록 정답과 오답의 색상 차이가 줄어듭니다.
 
-First, run the development server:
+> https://www.numble.it/45cee9d3-49ad-4f67-9d2a-14607c2eeba7
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
